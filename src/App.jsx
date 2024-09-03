@@ -1,35 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Pokemons } from "./components/Pokemons";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <main className="container mx-auto">
+      <form className="form-control w-full max-w-xs mx-auto items-center mt-10 mb-12">
+        <div className="flex w-full">
+          <div className="flex relative w-full ">
+            <input type="text" placeholder="Search for your language" className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent" name="search" />
+          </div>
+          <button type="submit" className="group btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-bavarian-gold-2 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"></button>
+        </div>
+      </form>
+      <Pokemons />
+    </main>
+  );
+};
